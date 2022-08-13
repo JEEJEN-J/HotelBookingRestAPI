@@ -1,1 +1,1 @@
-# HotelBooking
+# HotelBookingRestAPI
