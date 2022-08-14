@@ -32,6 +32,11 @@ public class CategoryServiceImpl implements CategoryService {
         return (criteria == null || criteria.trim().isEmpty()) ? new ArrayList<>() : categoryRepository.search(criteria);
     }
 
+    @Override
+    public Category findById(Integer id) {
+        return this.categoryRepository.findCategoryById(id);
+    }
+
     public Category save(Category category) {
         Audit audit = category;
         userService.inject(audit);

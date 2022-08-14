@@ -61,7 +61,6 @@ public class User implements Serializable {
     @Column(name = "activated_date")
     private LocalDateTime activatedDate;
 
-
     public User(String username, String password) {
         this.setUsername(username);
         this.setPassword(password);
@@ -78,7 +77,6 @@ public class User implements Serializable {
     public void setToken(String token) {
         this.token = token;
     }
-
 
     public Integer getId() {
         return id;

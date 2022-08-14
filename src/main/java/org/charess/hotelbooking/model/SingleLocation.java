@@ -1,23 +1,23 @@
 package org.charess.hotelbooking.model;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 @Entity
 @Table(name = "singleLocation")
 public class SingleLocation extends Name {
+
     @OneToOne
-    @JoinColumn(name = "singleLocation")
-    @MapsId
-    private Location singleLocation;
+    private Location location;
 
     public SingleLocation() {
     }
 
-    public Location getSingleLocation() {
-        return singleLocation;
+    public Location getLocation() {
+        return location;
     }
 
-    public void setSingleLocation(Location singleLocation) {
-        this.singleLocation = singleLocation;
+    public void setLocation(Location location) {
+        this.location = location;
     }
 }

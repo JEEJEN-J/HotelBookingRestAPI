@@ -17,6 +17,10 @@ public class Items extends Name {
     @OneToMany
     private List<Images> images;
 
+    @ManyToOne
+    @JoinTable(name = "category_items", joinColumns = @JoinColumn(name = "items_id"), inverseJoinColumns = @JoinColumn(name = "category_id"))
+    private Category category;
+
     @Column(name = "description")
     private String description;
 
@@ -41,6 +45,14 @@ public class Items extends Name {
     @JsonIgnore
     public void setBooking(Booking booking) {
         this.booking = booking;
+    }
+
+    public Category getCategory() {
+        return category;
+    }
+
+    public void setCategory(Category category) {
+        this.category = category;
     }
 
     public List<Images> getImages() {

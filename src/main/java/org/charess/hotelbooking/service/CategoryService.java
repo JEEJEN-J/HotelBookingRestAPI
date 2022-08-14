@@ -10,6 +10,7 @@ public interface CategoryService {
     List<Category> list();
 
     List<Category> search(String criteria);
+    Category findById(Integer id);
 
     Category save(Category category);
 

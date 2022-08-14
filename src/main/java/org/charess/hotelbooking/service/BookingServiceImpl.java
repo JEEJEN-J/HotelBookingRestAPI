@@ -37,8 +37,7 @@ public class BookingServiceImpl implements BookingService {
 
     @Override
     public Booking findByPerson(Person person) {
-        Person person1 = this.personRepository.findPersonById(person.getId());
-        return this.bookingRepository.findBookingByPerson(person1);
+        return this.bookingRepository.findBookingByPerson(person);
     }
 
     @Override
